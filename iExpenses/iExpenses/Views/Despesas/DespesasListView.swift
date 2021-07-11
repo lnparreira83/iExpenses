@@ -53,19 +53,19 @@ struct DespesasListView: View {
                                 .padding()
                             Text("R$ \(soma,specifier: "%.2f")")
                                 .padding()
-                            if despesas.count > 0 {
-                                Image("money")
-                                    .resizable()
-                                    .frame(width:70,height:50)
-                                    .animation(.none)
-                            }
+                            
+//                                Image("money")
+//                                    .resizable()
+//                                    .frame(width:70,height:50)
+//                                    .animation(.none)
                         }
                         .font(.headline)
                         .padding(.bottom,5)
                         .padding(.top,30)
                     }
                     
-                } else {
+                }
+                if despesas.count <= 0 {
                     VStack(alignment: .leading){
                         Spacer()
                         Text("Sem dados de despesas.")
