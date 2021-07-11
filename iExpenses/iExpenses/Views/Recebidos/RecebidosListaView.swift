@@ -58,20 +58,18 @@ struct RecebidosListaView: View {
                                 .padding()
                             Text("R$ \(soma,specifier: "%.2f")")
                                 .padding()
-                            if recebidos.count > 0 {
-                                Image("cofrinho")
-                                    .resizable()
-                                    .frame(width:70,height:50)
-                                    .animation(.none)
-                                    
-                                
-                            }
+                            
+//                                Image("cofrinho")
+//                                    .resizable()
+//                                    .frame(width:70,height:50)
+//                                    .animation(.none)
                         }
                         .font(.headline)
                         .padding(.bottom,5)
                         .padding(.top,30)
                     }
-                } else {
+            }
+            if recebidos.count <= 0 {
                     VStack(alignment: .leading){
                         Spacer()
                         Text("Sem dados de recebidos.")
