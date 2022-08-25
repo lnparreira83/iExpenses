@@ -53,6 +53,11 @@ struct DetalheDespesas: View {
                 Image(systemName: "trash")
             })
           }
+//        .background(Color.blue.opacity(0.20))
+//            .foregroundColor(.blue)
+//            .border(Color.black, width: 0.3)
+//            .cornerRadius(8)
+//            .shadow(color: .blue, radius: 8, x: 0, y: 0)
             
         }
     

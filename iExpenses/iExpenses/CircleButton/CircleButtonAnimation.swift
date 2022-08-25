@@ -14,7 +14,7 @@ struct CircleButtonAnimationView: View {
             .stroke(lineWidth: 3.0)
             .scale(animate ? 1.0 : 0.0)
             .opacity(animate ? 0.0 : 1.0)
-            .animation(animate ? Animation.easeOut(duration: 1.0) : .none)
+            .animation(animate ? Animation.easeOut(duration: 0.6) : .none)
            
 
     }
@@ -22,8 +22,8 @@ struct CircleButtonAnimationView: View {
 
 struct CircleButtonAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleButtonAnimationView(animate: .constant(false))
-            .foregroundColor(.gray)
+        CircleButtonAnimationView(animate: .constant(true))
+            .foregroundColor(.green)
             .frame(width: 75, height: 75)
     }
 }

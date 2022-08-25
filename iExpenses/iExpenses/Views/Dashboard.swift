@@ -192,7 +192,7 @@ struct Dashboard: View {
                                     Text("R$\(somaRecebidos - somaDespesas,specifier:"%.2f")")
                                         .font(.title)
                                         .fontWeight(.heavy)
-                                        .foregroundColor(.green)
+                                        .foregroundColor(.blue)
                                 } else {
                                     Text("R$\(somaRecebidos - somaDespesas,specifier:"%.2f")")
                                         .font(.title)

@@ -12,7 +12,7 @@ struct DespesasResumoView: View {
     @FetchRequest(entity:Despesas.entity(),sortDescriptors:[NSSortDescriptor(keyPath: \Despesas.data, ascending: false)]) var despesas:FetchedResults<Despesas>
     
     var soma: Double {
-        despesas.reduce(0) { $0 + $1.valor}
+        Double(despesas.reduce(0) { $0 + $1.valor})
     }
     
     var body: some View {

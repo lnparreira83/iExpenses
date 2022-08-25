@@ -14,7 +14,7 @@ struct RecebidosListaView: View {
     var recebidos:FetchedResults<Recebidos>
     
     var soma: Double {
-        recebidos.reduce(0) { $0 + $1.valor}
+        Double(recebidos.reduce(0) { $0 + $1.valor})
     }
     
     init(predicate: NSPredicate?, sortDescriptor: NSSortDescriptor){

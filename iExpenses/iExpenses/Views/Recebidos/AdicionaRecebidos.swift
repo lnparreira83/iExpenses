@@ -14,7 +14,7 @@ struct AdicionaRecebidos: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var mostrarDetalhesDespesas = false
     @State var nomeRecebido = ""
-    @State var valorRecebido = "0.0"
+    @State var valorRecebido = ""
     @State var dataRecebido = Date()
     
     
@@ -28,7 +28,7 @@ struct AdicionaRecebidos: View {
                     TextField("Nome do recebido : ",text:$nomeRecebido)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
-                    TextField("Valor do recebido : ",text:$valorRecebido).keyboardType(.numberPad)
+                    TextField("Valor do recebido : R$ 0.00 ",text:$valorRecebido).keyboardType(.decimalPad)
                         .keyboardType(.default)
                     DatePicker("Data da despesa : ",selection:$dataRecebido,displayedComponents:.date)
                     

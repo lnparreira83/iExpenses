@@ -10,8 +10,8 @@ import SwiftUI
 struct EditarDespesas: View {
     let despesas : Despesas
     @State var nomeDespesa = ""
-    @State var tipoDespesa = "Semanal"
-    @State var valorDespesa = "0.0"
+    @State var tipoDespesa = "Mensal"
+    @State var valorDespesa = ""
     @State var dataDespesa = Date()
     
     static let tipo = ["Semanal","Quinzenal","Mensal"]
@@ -30,7 +30,7 @@ struct EditarDespesas: View {
                         Text("\($0)")
                     }
                 }
-                TextField("Valor" ,text:$valorDespesa).keyboardType(.numbersAndPunctuation)
+                TextField("Valor" ,text:$valorDespesa).keyboardType(.decimalPad)
 
                 DatePicker("Data da despesa : ",selection:$dataDespesa,displayedComponents:.date)
                 
@@ -60,6 +60,11 @@ struct EditarDespesas: View {
                 .background(Color.blue)
                 
             }
+//            .background(Color.blue.opacity(0.20))
+//                .foregroundColor(.blue)
+//                .border(Color.black, width: 0.3)
+//                .cornerRadius(8)
+//                .shadow(color: .blue, radius: 8, x: 0, y: 0)
         }
     }
 }

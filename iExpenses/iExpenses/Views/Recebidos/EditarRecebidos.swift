@@ -10,7 +10,7 @@ import SwiftUI
 struct EditarRecebidos: View {
     let recebidos : Recebidos
     @State var nomeRecebido = ""
-    @State var valorRecebido = "0.0"
+    @State var valorRecebido = ""
     @State var dataRecebido = Date()
     
     @Environment(\.managedObjectContext) var moc
@@ -23,7 +23,7 @@ struct EditarRecebidos: View {
                 Text("Editar despesa")
                     .font(.headline)
                 TextField(recebidos.nome ?? "" ,text:$nomeRecebido)
-                TextField("Valor" ,text:$valorRecebido).keyboardType(.numberPad)
+                TextField("Valor" ,text:$valorRecebido).keyboardType(.decimalPad)
 
                 DatePicker("Data do recebido : ",selection:$dataRecebido,displayedComponents:.date)
                 
