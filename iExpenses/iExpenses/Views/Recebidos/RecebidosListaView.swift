@@ -73,7 +73,7 @@ struct RecebidosListaView: View {
                     VStack(alignment: .leading){
                         Spacer()
                         Text("Sem dados de recebidos.")
-                        Text("Por favor insira uma novo recebido clicando no botão + ")
+                        Text("Por favor insira um novo recebido clicando no botão + ")
                         Spacer()
                     }
                         

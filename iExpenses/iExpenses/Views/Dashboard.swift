@@ -94,21 +94,22 @@ struct Dashboard: View {
                         HStack(spacing:5){
                             ZStack{
                                 Circle()
-                                    .stroke(Color.white.opacity(0.1),lineWidth: 18)
+                                    .stroke(Color.white.opacity(0.1),lineWidth: 5)
 
                                 let progress = somaDespesas - somaRecebidos
 
                                 Circle()
                                     .trim(from: 0, to: CGFloat(progress))
-                                    .stroke(Color.yellow, style: StrokeStyle(lineWidth: 18, lineCap: .round, lineJoin: .round))
+                                    .stroke(Color.yellow, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
                                     .rotationEffect(.init(degrees: -90))
                                 
                                 Image(systemName: "dollarsign.square.fill")
                                     .font(.system(size: 55, weight: .bold))
                                     .foregroundColor(.white)
                             }
-                            .frame(width: 120)
-                            .padding(.bottom,20)
+                            .frame(width: 110)
+                            .padding(.bottom,10)
+                            .padding(.leading,15)
                             
                             if checkReceita == true {
                             
@@ -187,10 +188,17 @@ struct Dashboard: View {
                             .padding()
                             
                             HStack{
-                                Text("R$\(somaRecebidos - somaDespesas,specifier:"%.2f")")
-                                    .font(.title)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(.black)
+                                if somaRecebidos > somaDespesas {
+                                    Text("R$\(somaRecebidos - somaDespesas,specifier:"%.2f")")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(.green)
+                                } else {
+                                    Text("R$\(somaRecebidos - somaDespesas,specifier:"%.2f")")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(.red)
+                                }
                                     
                                 
                                 Spacer(minLength: 0)
@@ -224,10 +232,10 @@ struct Dashboard: View {
                         
                         .padding(.top,10)
                     }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                 .background(Color.gray.opacity(0.30))
+                 .background(Color.gray.opacity(0.20))
                  .border(Color.black, width: 0.3)
-                 .cornerRadius(12)
-                 .shadow(color: .green, radius: 8, x: 0, y: 0)
+                 .cornerRadius(8)
+                 .shadow(color: .blue, radius: 8, x: 0, y: 0)
                     
             }
             .navigationBarTitle("Resumo das Despesas",displayMode: .inline)
