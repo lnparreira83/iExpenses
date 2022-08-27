@@ -60,11 +60,11 @@ struct EditarDespesas: View {
                 .background(Color.blue)
                 
             }
-//            .background(Color.blue.opacity(0.20))
-//                .foregroundColor(.blue)
-//                .border(Color.black, width: 0.3)
-//                .cornerRadius(8)
-//                .shadow(color: .blue, radius: 8, x: 0, y: 0)
+            .background(Color.blue.opacity(0.20))
+//            .foregroundColor(.blue)
+            .border(Color.black, width: 0.3)
+            .cornerRadius(8)
+            .shadow(color: .blue, radius: 8, x: 0, y: 0)
         }
     }
 }

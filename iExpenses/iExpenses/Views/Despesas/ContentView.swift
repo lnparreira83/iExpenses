@@ -35,9 +35,9 @@ struct ContentView: View {
                     
                 }
                 .background(Color.gray.opacity(0.10))
-                .border(Color.black, width: 0.3)
+                .border(Color.black, width: 0.2)
                 .cornerRadius(12)
-                .shadow(color: .blue, radius: 8, x: 0, y: 0)
+                .shadow(color: .blue, radius: 6, x: 0, y: 0)
                 .navigationBarTitle("iExpenses",displayMode: .inline).font(.headline)
                 .navigationBarItems(trailing: Button(action:{
                     self.mostrarAdicionaDespesa = true
