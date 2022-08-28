@@ -19,37 +19,39 @@ class iExpensesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    
     func testAdicionaDespesas() throws {
-        @Environment(\.managedObjectContext) var moc
-        @Environment(\.presentationMode) var presentationMode
         
-        class Despesas {
+        struct Despesas {
             var id = UUID();
-            var nome : String;
-            var data : String;
-            var tipo : String;
-            var valor : Double;
-            
-            init(id : UUID, nome : String = "Lucas", data : String = "28/12/2022", tipo : String = "Mensal", valor : Double = 25.02) {
-                self.id = id;
-                self.nome = nome;
-                self.data = data;
-                self.tipo = tipo;
-                self.valor = valor;
-            }
+            var nome : String = "Aluguel";
+            var data : String = "28/08/2022";
+            var tipo : String = "Mensal";
+            var valor : Double = 1000.99;
         }
         
-//        let novaDespesa : Despesas;
-//        novaDespesa.nome = "Lucas"
-//        novaDespesa.tipo = "Mensal"
-//        let valorDespesa = 17.23
-//        novaDespesa.valor = valorDespesa ?? 0.0
-        //novaDespesa.timeStamp = self.dataDespesa
+        let data = Despesas()
+        XCTAssertEqual(data.nome.isEmpty, false)
+        XCTAssertEqual(data.data.isEmpty, false)
+        XCTAssertEqual(data.tipo.isEmpty, false)
+        XCTAssertEqual(data.valor.isZero, false)
+    }
+    
+    func testAdicionaRecebidos() throws {
         
+        struct Recebidos {
+            var id = UUID();
+            var nome : String = "Aluguel";
+            var data : String = "28/08/2022";
+            var tipo : String = "Mensal";
+            var valor : Double = 1000.99;
+        }
         
-        //assert(!novaDespesa.nome.isEmpty)
-        
-        
+        let data = Recebidos()
+        XCTAssertEqual(data.nome.isEmpty, false)
+        XCTAssertEqual(data.data.isEmpty, false)
+        XCTAssertEqual(data.tipo.isEmpty, false)
+        XCTAssertEqual(data.valor.isZero, false)
         
     }
 
