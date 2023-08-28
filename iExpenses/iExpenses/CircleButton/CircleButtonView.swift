@@ -17,10 +17,10 @@ struct CircleButtonView: View {
             .frame(width:40, height: 40)
             .background(
                 Circle()
-                    .foregroundColor(Color(.gray))
+                    .foregroundColor(Color(.white))
                     .opacity(0.15)
             )
-            .shadow(color: Color.white.opacity(0.5), radius: 8, x: 0, y: 0)
+            .shadow(color: Color.blue.opacity(0.7), radius: 8, x: 0, y: 0)
             .padding()
     }
 }
